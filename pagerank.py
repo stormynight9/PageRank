@@ -1,11 +1,4 @@
 def pagerank(graph):
-    """
-    Graph object as input
-
-    Returns a dictionary where the keys are the node names and the values are
-    the calculated pagerank score for that given node.
-    """
-
     # Initialize values for all nodes s.t. that add up to one
     n = len(graph.nodes)
     init_val = 1.0/n
