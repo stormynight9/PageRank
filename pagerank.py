@@ -3,7 +3,7 @@ def pagerank(graph):
     n = len(graph.nodes)
     init_val = 1.0/n
     ranks = dict(zip(graph.get_nodes(), [init_val] * n))
-
+    print(ranks)
     new_ranks = ranks
     for node, value in new_ranks.items():
         print(node.name, value)
