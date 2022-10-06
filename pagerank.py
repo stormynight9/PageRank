@@ -3,11 +3,7 @@ def pagerank(graph):
     n = len(graph.nodes)
     init_val = 1.0/n
     ranks = dict(zip(graph.get_nodes(), [init_val] * n))
-    print(ranks)
     new_ranks = ranks
-    for node, value in new_ranks.items():
-        print(node.name, value)
-    print('-----------')
 
     # Calculate new rank for each node
     for node, prev_rank in ranks.items():
@@ -25,9 +21,6 @@ def pagerank(graph):
             rank_sum = rank_sum + transfer_amount
 
         new_ranks[node] = ranks[node] + rank_sum
-        for node, value in new_ranks.items():
-            print(node.name, value)
-        print('-----------')
 
     # Set ranks to the new ranks calculated in this iteration
     ranks = new_ranks
